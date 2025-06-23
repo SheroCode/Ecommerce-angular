@@ -3,7 +3,7 @@ import { ProductsPage } from './products-page/products-page';
 import { Navbar } from './navbar/navbar';
 @Component({
   selector: 'app-root',
-  imports: [ProductsPage, Navbar],
+  imports: [ProductsPage],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

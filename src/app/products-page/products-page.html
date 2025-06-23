@@ -1,30 +1,6 @@
+<app-navbar></app-navbar>
 <div class="container">
-  @for(myproduct of myProducts;track myproduct.id){
-  <div class="mb-4 p-8 flex items-center justify-center">
-    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
-      <ng-template #header>
-        <img
-          alt="Card"
-          class="w-full"
-          [style]="{ width: '100%' }"
-          src="{{myproduct.thumbnail}}"
-        />
-      </ng-template>
-      <ng-template #title> {{myproduct.title}} </ng-template>
-      <ng-template #subtitle> {{myproduct.category}} </ng-template>
-      <span>{{myproduct.price}}</span>
-      <p>{{myproduct.description}}</p>
-      <ng-template #footer>
-        <div class="flex gap-4 mt-1">
-          <button
-            [ngClass]="{'added-button': myproduct.addedToCart }"
-            (click)="addToCart(myproduct)"
-          >
-            Add to card
-          </button>
-        </div>
-      </ng-template>
-    </p-card>
-  </div>
+  @for(myproduct of myProducts();track myproduct.id){
+  <app-product [myproduct]="myproduct"></app-product>
   }
 </div>
