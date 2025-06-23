@@ -16,13 +16,12 @@
       <p>{{myproduct.description}}</p>
       <ng-template #footer>
         <div class="flex gap-4 mt-1">
-          <p-button
-            label="Add to card"
-            severity="secondary"
-            class="w-full"
-            [outlined]="true"
-            styleClass="w-full"
-          />
+          <button
+            [ngClass]="{'added-button': myproduct.addedToCart }"
+            (click)="addToCart(myproduct)"
+          >
+            Add to card
+          </button>
         </div>
       </ng-template>
     </p-card>

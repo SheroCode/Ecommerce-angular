@@ -1,8 +1,18 @@
-.container{
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+.container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.added-button {
+  background-color: green;
+  color: white;
+}
+button {
+  padding: 8px;
+  outline: solid green 2px;
+  border-radius:15px;
+  font-weight: 600;
 }

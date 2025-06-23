@@ -4,16 +4,15 @@ import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
-
+import { CardModule } from 'primeng/card';
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule, RouterModule, MenubarModule, ButtonModule],
+  imports: [CommonModule, RouterModule, MenubarModule, ButtonModule,CardModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar implements OnInit {
+export class Navbar  {
   items: MenuItem[] = [];
-
   ngOnInit() {
     this.items = [
       {

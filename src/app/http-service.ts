@@ -4,7 +4,7 @@ import { inject, Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
+export class HttpService {
   private http = inject(HttpClient);
 
   getProducts() {
