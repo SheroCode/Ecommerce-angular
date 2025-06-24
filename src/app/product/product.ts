@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { CartService } from '../cart-service';
 
 @Component({
   selector: 'app-product',
@@ -11,9 +12,11 @@ import { CardModule } from 'primeng/card';
   styleUrl: './product.scss',
 })
 export class Product {
- myproduct = input<any>();
+  myproduct = input<any>();
+  private cartService = inject(CartService);
 
   addToCart(product: any) {
     product.addedToCart = true;
+    this.cartService.increment(); // ✅ this will update the signal
   }
 }

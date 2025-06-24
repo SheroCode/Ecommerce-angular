@@ -1,3 +1,29 @@
-<div class="card">
-  <p-menubar [model]="items" />
-</div>
+<p-menubar>
+  <ng-template pTemplate="start"></ng-template>
+  <ng-template pTemplate="menu">
+    <ul class="p-menubar-root-list">
+      <li class="p-menuitem">
+        <a routerLink="/" class="p-menuitem-link">
+          <i class="pi pi-home"></i> Products
+        </a>
+      </li>
+      <li class="p-menuitem">
+        <a routerLink="/cart" class="p-menuitem-link">
+          <i class="pi pi-shopping-cart"></i>
+          Cart
+          <span class="cart-badge">{{ cartService.counter() }}</span>
+        </a>
+      </li>
+      <li class="p-menuitem">
+        <a routerLink="/login" class="p-menuitem-link">
+          <i class="pi pi-sign-in"></i> Login
+        </a>
+      </li>
+      <li class="p-menuitem">
+        <a routerLink="/register" class="p-menuitem-link">
+          <i class="pi pi-user-plus"></i> Register
+        </a>
+      </li>
+    </ul>
+  </ng-template>
+</p-menubar>

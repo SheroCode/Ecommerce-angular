@@ -5,20 +5,20 @@
         alt="Card"
         class="w-full"
         [style]="{ width: '100%' }"
-        src="{{myproduct()?.thumbnail}}"
+        [src]="myproduct()?.thumbnail"
       />
     </ng-template>
-    <ng-template #title> {{myproduct()?.title}} </ng-template>
-    <ng-template #subtitle> {{myproduct()?.category}} </ng-template>
-    <span>{{myproduct()?.price}} $</span>
-    <p>{{myproduct()?.description}}</p>
+    <ng-template #title> {{ myproduct()?.title }} </ng-template>
+    <ng-template #subtitle> {{ myproduct()?.category }} </ng-template>
+    <span>{{ myproduct()?.price }} $</span>
+    <p>{{ myproduct()?.description }}</p>
     <ng-template #footer>
       <div class="flex gap-4 mt-1">
         <button
-          [ngClass]="{'added-button': myproduct()?.addedToCart }"
+          [ngClass]="{ 'added-button': myproduct()?.addedToCart }"
           (click)="addToCart(myproduct())"
         >
-          Add to card
+          Add to cart
         </button>
       </div>
     </ng-template>
